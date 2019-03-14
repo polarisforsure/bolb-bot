@@ -100,7 +100,7 @@ async def ping(ctx):
    # wherewedroppin command
 @client.command(pass_context=True)
 async def wherewedroppin(ctx):
-	locations = ["https://i.imgur.com/whE3Xej.jpg", "Heh.. We're going Bunker.", "Why not drop at Water Treatment? It's high teir loot over there.", "Artillery, don't worry, it will be an easy fight for you and your team!", "Just to mess with you guys, it's going to be Airbase.", "Do you like thunder? Because we bout' to drop at Thunderdome"]
+	locations = ['https://i.imgur.com/whE3Xej.jpg', 'https://i.imgur.com/vRIbhOL.jpg', 'https://i.imgur.com/xI2dgyR.jpg', 'https://i.imgur.com/tf0Qn5T.jpg']
 	embed=discord.Embed(title="Where we droppin'?", color=0x761fa1)
 	embed.add_field(name="Location", value=random.choice(locations), inline=False)
 	await client.say(embed=embed)
