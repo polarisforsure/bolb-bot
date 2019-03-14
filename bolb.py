@@ -101,9 +101,6 @@ async def ping(ctx):
 @client.command(pass_context=True)
 async def alb(ctx):
 	embed = discord.Embed(
-		title = "LOOT TEIRS",
-		description = "Courtesy of Octavia Media - Latest map with loot teirs, drop somewhere smart!",
-		colour = discord.Colour.blue()
 	)
 	embed.set_image(url="https://i.imgur.com/whE3Xej.jpg")
 	embed.set_image(url="https://i.imgur.com/vRIbhOL.jpg")
