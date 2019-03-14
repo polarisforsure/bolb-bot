@@ -105,4 +105,4 @@ async def wherewedroppin(ctx):
 	embed.add_field(name="Location", value=random.choice(locations), inline=False)
 	await client.say(embed=embed)
 
-    client.run(discordBotToken)
+client.run(discordBotToken)
