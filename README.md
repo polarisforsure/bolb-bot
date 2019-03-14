@@ -1,81 +1,32 @@
-# Rewrite Photopicker
-
-This is a rewrite version of my Async branch [photopicker](https://github.com/SobieskiCodes/photopicker)
-Written to handle asynchronous compatible with Aiohttp requests, SQL storage, and local image caching.
 
 
-## Command Changes
+# If not, you can modify it according to your needs following the steps below:
 
-* Setup has been removed completely and is now done automagically.
-* Adding admins is now done with mentions eg; .addadmin @ProbsJustin#0001
-* removeadmin has been added
-* Adding albums no longer gives a prompt, and the command has been reworked
+## Pre-requisites:
+* Have  2.7>Python Version<3.7.X installed (you don't need it if you aren't planning to run it on your PC though) 
+* Have Discord.py installed, see [Discord.py](https://github.com/Rapptz/discord.py) for that.
+## Step-By-Step:
+* Go to [Apex API](https://apex.tracker.gg/site-api) and request your API Key.
+* Create your Discord App on [Discord Developers](https://discordapp.com/login?redirect_to=%2Fdevelopers%2Fapplications%2F) (There are many youtube videos teaching that) and get your discord token.
+* Once you have your 2 needed keys, replace them on the specified place at the code.
+* Once my bot only accepts commands that are sent in the right channel, you'll have to replace the channel name placeholder with your desired channel's name in every function.
+* That's it.
+
+## Running on Heroku (Optional)
+In case you want to host your bot 24/7 on Heroku, i have provided the needed files altogether (main.py, requirements.txt, Procfile), all you need to do is:
+* Upload your project to your github
+* Go on Heroku, create your app, then go on Deploy and sync it with the right repository on github
+* Go on Setting and add a buildpack (heroku/python)
+* Go back on Deploy and deploy the branch.
+* That's it
+
+## Functions:
+* !set_level PLATFORM NICKNAME: Searchs for this Origin nickname, check it's level on apex, and autorole the message author with the related role.
+* >check_level PLATFORM NICKNAME: Searchs for this Origin nickname, check it's level on apex tells the level but doens't autorole
+* >check_kills PLATFORM NICKNAME: Searchs for this Origin nickname, check it's number of kills and tells it.
+* >help: Help function, unfortunately i couldn't manage to override the help function, so i made another with different name.
 
 
-### Commands
-[]Indicates required ()Indicates Options *Is an available alias ~Requires manage guild perms or added as an admin
-# Owner Commands - Not available in public bot
-```
-load [cog name] - Loads a cog you've uploaded, case sensitive.
-unload [cog name] - Unloads a cog you have enabled, case sensitive.
-reload [cog name] - Reloads a cog you've changed thats active, case sensitive.
-echo (message) - Replies back in channel provided text.
-vme - Displays info about the bot, version, server count, member count, uptime.
-sts [message] - Changes the presence of the bot
-ui [message] - Updates the <info> command text
-```
-# Guild Owner Commands
-```
-setprefix [prefix] *sp - Set the prefix for the guild, if no prefix is provided it will spit the current prefix (works with mention)
-invite *inv - Send the invite link to the channel
-```
-# General Commands
-```
-album [link] [name] ~ *addalbum, aa - Add an album ex; album https://imgur.com/gallery/MnIjj3n a phone
-deletealbum [name] ~ *delalbum,remalbum,da,ra - Delete an album ex; delalbum a phone
-addadmin [name/mention] ~ *adda,admin - Adds an admin to the bot, can be a case sensitive name or mention
-removeadmin [name/mention] ~ *remadmin,deladmin,deleteadmin - Removes and admin, same as addadmin
-pickone [album] *p1,po,pick - Pick a random image from the album, if only one album it will not require an album name
-albumlist *al,list - Lists all albums in the server
-info - Displays custom text set by owner of the bot
-set [content/title](message) ~ - Change the title/content from "I Chose..." "you asked.." can be blank
-```
 
-### Requirements
-
-```
-python3.6+
-imgurpython
-```
-
-And a json file under /data/config name 'startup.json'
-
-```
-{
-    "config": {
-        "discord_token": "Discord token here",
-        "imgur_client_id": "client id here",
-        "imgur_client_secret": "client secret here",
-        "info": "what you want the info command to say here \n breaks are supported"
-    }
-}
-```
-
-**The bot needs to be started BEFORE you invite it to a server - it creates the files it needs on server join.
-
-## Built With
-
-* [Discord.py Rewrite](https://github.com/Rapptz/discord.py/tree/rewrite) - a modern, easy to use, feature-rich, and async ready API wrapper for Discord.
-
-## Authors
-
-* **Justin Sobieski** - [Sobieski.Codes](https://sobieski.codes)
-
-## License
-
-This project is licensed under the The Unlicense - see the [LICENSE.md](LICENSE) file for details
-
-## Acknowledgments
-
-* Special thanks to [stroupbslayen](https://github.com/stroupbslayen) for the snippets and constant answers for stupid questions.
-
+## Support:
+* Go to [Octavia Media](https://octaviamedia.se) to request support.
