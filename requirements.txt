@@ -1,5 +1,5 @@
 requests
 discord.py
 discord.py[voice]
-python3.6+
+python3.6
 imgurpython
