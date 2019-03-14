@@ -14,10 +14,6 @@ def get_prefix(bot, message):
         prefix = '!'
     return commands.when_mentioned_or(*prefix)(bot, message)
 
-
-bot = commands.AutoShardedBot(command_prefix=get_prefix, formatter=None)
-
-
 @bot.event
 async def on_guild_join(guild):
     if not os.path.exists(f"./data/servers/{str(guild.id)}/config.json"):
