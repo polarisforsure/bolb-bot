@@ -99,8 +99,16 @@ async def ping(ctx):
  
    # wherewedroppin command
 @client.command(pass_context=True)
-async def wherewedroppin(ctx):
-	embed.set_image[url="https://i.imgur.com/whE3Xej.jpg", "https://i.imgur.com/vRIbhOL.jpg", "https://i.imgur.com/xI2dgyR.jpg", "https://i.imgur.com/tf0Qn5T.jpg"]
+async def alb(ctx):
+	embed = discord.Embed(
+		title = "LOOT TEIRS",
+		description = "Courtesy of Octavia Media - Latest map with loot teirs, drop somewhere smart!",
+		colour = discord.Colour.blue()
+	)
+	embed.set_image(url="https://i.imgur.com/whE3Xej.jpg")
+	embed.set_image(url="https://i.imgur.com/vRIbhOL.jpg")
+	embed.set_image(url="https://i.imgur.com/xI2dgyR.jpg")
+	embed.set_image(url="https://i.imgur.com/tf0Qn5T.jpg")
 	embed=discord.Embed(title="Where we droppin'?", color=0x761fa1)
 	embed.add_field(name="Look at that, a wild Bolb", value=random.choice(embed.set_image), inline=False)
 	await client.say(embed=embed)
